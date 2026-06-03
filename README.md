@@ -106,16 +106,16 @@ lighthouse:
 
 Плэйбук завершился ошибкой, так как он не производит установку, а handler пытается запустить сервис который не установлен
 
-![check](https://github.com/deadwhitepunk/hw-ansible-01/blob/main/img/ansible_check.png)
+![check](https://github.com/deadwhitepunk/hw-ansible-03/blob/main/img/ansible_check.png)
 7. Запустите playbook на `prod.yml` окружении с флагом `--diff`. Убедитесь, что изменения на системе произведены.
-![1.11](https://github.com/deadwhitepunk/hw-ansible-01/blob/main/img/diff1.png)
+![1.11](https://github.com/deadwhitepunk/hw-ansible-03/blob/main/img/diff1.png)
 8. Повторно запустите playbook с флагом `--diff` и убедитесь, что playbook идемпотентен.
-![1.11](https://github.com/deadwhitepunk/hw-ansible-01/blob/main/img/diff2.png)
+![1.11](https://github.com/deadwhitepunk/hw-ansible-03/blob/main/img/diff2.png)
 9. Подготовьте README.md-файл по своему playbook. В нём должно быть описано: что делает playbook, какие у него есть параметры и теги.
-[Ссылка на README playbook](https://github.com/deadwhitepunk/hw-ansible-01/blob/main/playbook/README.md)
+[Ссылка на README playbook](https://github.com/deadwhitepunk/hw-ansible-03/blob/main/playbook/README.md)
 10. Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-03-yandex` на фиксирующий коммит, в ответ предоставьте ссылку на него.
 
-[Ссылка на TERRAFORM](https://github.com/deadwhitepunk/hw-ansible-01/blob/main/terraform)
+[Ссылка на TERRAFORM](https://github.com/deadwhitepunk/hw-ansible-03/blob/main/terraform)
 
 ---
 
