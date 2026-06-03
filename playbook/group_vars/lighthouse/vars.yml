@@ -1,6 +1,8 @@
+---
 lighthouse_repo: "https://github.com/VKCOM/lighthouse.git"
-lighthouse_dest: "/var/www/lighthouse"
+lighthouse_dest: "/home/www-data/lighthouse"
 nginx_user: "www-data"
-clickhouse_host: "192.168.1.10"
+clickhouse_host: "{{ hostvars[groups['clickhouse'][0]]['ansible_default_ipv4']['address'] }}"
 clickhouse_port: "8123"
-lighthouse_port: 80
+lighthouse_port: 8080
+root_dir: "{{ lighthouse_dest }}"

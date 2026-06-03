@@ -8,12 +8,12 @@ all:
 clickhouse:
   hosts:
     clickhouse-01:
-      ansible_host: 5.35.106.164
+      ansible_host: 94.131.84.96
 vector:
   hosts:
     vector-01:
-      ansible_host: 94.131.85.193
+      ansible_host: 94.131.95.72
 lighthouse:
   hosts:
     lighthouse-01:
-      ansible_host: 94.131.80.71
+      ansible_host: 94.131.91.120

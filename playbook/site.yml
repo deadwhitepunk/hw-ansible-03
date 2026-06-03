@@ -111,20 +111,11 @@
         - vector
         - restart service
 
-- name: Deploy Lighthouse (VKCOM) - lightweight ClickHouse GUI
-  hosts: lighthouse  # Изменено с 'all' на 'clickhouse'
+- name: Install Lighthouse
+  hosts: lighthouse
   become: true
-  vars:
-    lighthouse_repo: "https://github.com/VKCOM/lighthouse.git"
-    lighthouse_dest: "/usr/share/nginx/html/lighthouse"
-    nginx_user: "www-data"
-    clickhouse_host: "{{ hostvars[groups['clickhouse'][0]]['ansible_default_ipv4']['address'] }}"
-    clickhouse_port: "8123"
-    lighthouse_port: 8080  # Порт для Lighthouse, если используем отдельный
-    root_dir: "{{ lighthouse_dest }}"
 
   tasks:
-
     - name: Update apt cache
       ansible.builtin.apt:
         update_cache: true
@@ -178,13 +169,6 @@
         name: nginx
         state: started
         enabled: true
-
-    - name: Display access URL
-      ansible.builtin.debug:
-        msg: |
-          Lighthouse доступен по адресу:
-          http://{{ ansible_default_ipv4.address }}/
-          Для авторизации используйте: http://{{ ansible_default_ipv4.address }}/?user=default
 
   handlers:
     - name: Reload nginx

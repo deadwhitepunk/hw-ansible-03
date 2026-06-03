@@ -25,3 +25,15 @@ server {
         proxy_read_timeout 60s;
     }
 }
+
+server {
+  listen        80;
+  server_name   localhost;
+
+  access_log /var/log/nginx/lighthouse_access.log;
+
+  location / {
+    root  {{ root_dir }};
+    index index.html;
+  }
+}
